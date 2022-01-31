@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View, ScrollView, TextInput, Button } from 'react-native';
 
-function LoginScreen(props) {
+function LoginScreen({ navigation }) {
 
     const [email, onChangeEmail] = React.useState("");
     const [password, onChangePassword] = React.useState("");
@@ -27,8 +27,8 @@ function LoginScreen(props) {
                 />
 
                 <Button
-                title='Login'
-                onPress={() => console.log('logged')}
+                    title='Login'
+                    onPress={() => navigation.navigate('WelcomeScreen')}
                 />
 
             </View>

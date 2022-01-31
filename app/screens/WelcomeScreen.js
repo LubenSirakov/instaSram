@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, StyleSheet, Text, View, ScrollView } from 'react-native';
 
 
-function WelcomeScreen(props) {
+function WelcomeScreen({ navigation}) {
     return (
         <View style={styles.mainContainer}>
             <View style={styles.headerContainer}>
