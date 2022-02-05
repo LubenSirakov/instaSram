@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View, ScrollView, TextInput, Button } from 'react-native';
+import { Link } from '@react-navigation/native';
 
 function LoginScreen({ navigation }) {
 
@@ -31,6 +32,7 @@ function LoginScreen({ navigation }) {
                     onPress={() => navigation.navigate('WelcomeScreen')}
                 />
 
+            <Text style={styles.additionalText}>Don't have an account? <Text onPress={() => navigation.navigate('Register')}>Register</Text></Text>
             </View>
 
         </View>
@@ -63,6 +65,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         padding: 10,
     },
+    additionalText: {
+        fontSize: 15,
+        padding: 30
+    }
 })
 
 export default LoginScreen;
